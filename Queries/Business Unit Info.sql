@@ -1,0 +1,11 @@
+select to_char(hao.organization_id) as bu_id,haot.name,to_char(hao.business_group_id) business_group_id
+FROM
+HR_ALL_ORGANIZATION_UNITS_F hao,
+HR_ORGANIZATION_UNITS_F_TL haot
+WHERE
+hao.ORGANIZATION_ID = haot.ORGANIZATION_ID
+AND hao.EFFECTIVE_START_DATE = haot.EFFECTIVE_START_DATE
+AND hao.EFFECTIVE_END_DATE = haot.EFFECTIVE_END_DATE
+AND TRUNC(SYSDATE) BETWEEN hao.EFFECTIVE_START_DATE AND hao.EFFECTIVE_END_DATE
+AND haot.LANGUAGE='US'
+AND haot.name = :P_BU_NAME
