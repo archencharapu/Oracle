@@ -1,0 +1,29 @@
+{
+"Request URL":"GET /fscmRestApi/resources/11.13.18.05/purchaseOrders?q=OrderNumber=RXP105685&onlyData=true&fields=POHeaderId,OrderNumber,SoldToLegalEntityId,SoldToLegalEntity,Supplier&limit=1",
+"Status":"HTTP/1.1 200 OK"
+}
+
+
+{
+  "items": [
+    {
+      "POHeaderId": 300002147847852,
+      "OrderNumber": "RXP105685",
+      "SoldToLegalEntityId": 300000006363685,
+      "SoldToLegalEntity": "Chewy Pharmacy KY, LLC",
+      "Supplier": "VETIQ"
+    }
+  ],
+  "count": 1,
+  "hasMore": false,
+  "limit": 1,
+  "offset": 0,
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ekdi.fa.us6.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/purchaseOrders",
+      "name": "purchaseOrders",
+      "kind": "collection"
+    }
+  ]
+}
